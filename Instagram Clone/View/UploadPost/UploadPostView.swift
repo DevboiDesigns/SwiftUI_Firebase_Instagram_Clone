@@ -10,7 +10,7 @@ import SwiftUI
 struct UploadPostView: View {
     
     @State private var selectedImages: UIImage?  // UIKit
-    @State var postImage: Image?   // SwiftUI
+    @State private var postImage: Image?   // SwiftUI
     @State var captionText = ""
     @State var imagePickerPresented = false
     

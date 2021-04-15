@@ -15,23 +15,44 @@ struct RegistrationView: View {
     @State private var password = ""
     @Environment(\.presentationMode) var mode
     
+    @State private var selectedImages: UIImage?  // UIKit
+    @State private var image: Image?   // SwiftUI
+    @State var imagePickerPresented = false
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             
             VStack {
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "plus.viewfinder")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 100, height: 100, alignment: .center)
-                        .foregroundColor(.white)
-                        .padding(.bottom, 20)
-                        //.offset(y: -20)
-                }).padding(.top, 20)
+                // Top Image
+                ZStack {
+                    if let image = image {
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 100, height: 100, alignment: .center)
+                            .clipShape(Circle())
+                        //                        .foregroundColor(.white)
+                        //                        .padding(.bottom, 20)
+                        //                        .offset(y: -20)
+                    } else {
+                        Button(action: {
+                            imagePickerPresented.toggle()
+                        }, label: {
+                            Image(systemName: "plus.viewfinder")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 100, height: 100, alignment: .center)
+                                .foregroundColor(.white)
+                                .padding(.bottom, 20)
+                            //.offset(y: -20)
+                        }).sheet(isPresented: $imagePickerPresented, onDismiss: loadImage, content: {
+                            ImagePicker(image: $selectedImages)  // presents a Sheet or Modale View
+                        })
+                        .padding(.top, 20)
+                    }
+                }
                 
                 VStack(spacing: 20) {
                     // Email
@@ -67,7 +88,6 @@ struct RegistrationView: View {
                         .padding(.horizontal, 32)
                 }
                 
-                
                 // Sign In BUTTON
                 
                 Button(action: {
@@ -98,15 +118,24 @@ struct RegistrationView: View {
                                     .font(.system(size: 14))
                                 Text("Sign In")
                                     .font(.system(size: 14, weight: .semibold))
-                                    
+                                
                             }
                             .foregroundColor(.white)
                         })
                     }) // Nav Link
                     .padding(.bottom, 20)
                 
-            }
+                
+            } // VStack Main
         }
+    }
+}
+
+
+extension RegistrationView {
+    func loadImage() {
+        guard let selectedImage = selectedImages else { return }
+        image = Image(uiImage: selectedImage)
     }
 }
 
