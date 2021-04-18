@@ -11,6 +11,7 @@ struct LoginView: View {
     
     @State private var email = ""
     @State private var password = ""
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         
@@ -63,7 +64,7 @@ struct LoginView: View {
                     // Sign In BUTTON
                     
                     Button(action: {
-                        
+                        viewModel.login(withEmail: email, password: password)
                     }, label: {
                         Text("Sign In")
                             .font(.headline)
@@ -98,8 +99,8 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//    }
+//}

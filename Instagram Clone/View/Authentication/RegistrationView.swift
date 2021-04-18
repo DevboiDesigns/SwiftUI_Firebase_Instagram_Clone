@@ -14,6 +14,7 @@ struct RegistrationView: View {
     @State private var fullName = ""
     @State private var password = ""
     @Environment(\.presentationMode) var mode
+    @EnvironmentObject var viewModel: AuthViewModel
     
     @State private var selectedImages: UIImage?  // UIKit
     @State private var image: Image?   // SwiftUI
@@ -91,7 +92,7 @@ struct RegistrationView: View {
                 // Sign In BUTTON
                 
                 Button(action: {
-                    
+                    viewModel.register(withEmail: email, password: password, image: selectedImages, fullname: fullName, username: username)
                 }, label: {
                     Text("Sign Up")
                         .font(.headline)
