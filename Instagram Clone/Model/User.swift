@@ -13,6 +13,7 @@ struct User: Identifiable, Decodable {
     let profileImageUrl: String
     let fullname: String
     @DocumentID var id: String?
+    var isFollowed: Bool? = false   // requires Optional for Decodable - if not in JSON/ database will still ignore 
     
     var isCurrentUser: Bool { return AuthViewModel.shared.userSession?.uid == id }
 }
