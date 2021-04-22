@@ -6,27 +6,31 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FeedCell: View {
+    
+    let post: Post
+    
     var body: some View {
         
         VStack(alignment: .leading) {
             // user info
             HStack {
-                Image("ETP_logo")
+                KFImage(URL(string: post.ownerImageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 36, height: 36)
                     .clipped()
                     .cornerRadius(18)
-                Text("English a tu Puerta")
+                Text(post.ownerUsername)
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
             }
             .padding([.leading, .bottom], 8)
             
             // post Image
-            Image("text_content")
+            KFImage(URL(string: post.imageUrl))
                 .resizable()
                 .scaledToFill()
                 .frame(maxHeight: 440)
@@ -75,16 +79,16 @@ struct FeedCell: View {
             
             // caption
             
-            Text("3 likes")
+            Text("\(post.likes) likes")
                 .font(.system(size: 14, weight: .semibold))
                 .padding(.leading, 8)
                 .padding(.bottom, 2)
             
             HStack {
-                Text("English a la Puerta")
+                Text(post.ownerUsername)
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
-                + Text(" se enorgullece de colaborar con Lakeside para proveer talleres interactivos, divertidos y de calidad para los alumnos de Lakeside.")
+                    + Text(" \(post.caption)")
                     .font(.system(size: 15))
             } //HStack
             .padding(.horizontal, 8)  // horizontal= leading and trailing
@@ -101,10 +105,10 @@ struct FeedCell: View {
     }
 }
 
-struct FeedCell_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedCell()
-            .previewLayout(.sizeThatFits)
-            //.padding()
-    }
-}
+//struct FeedCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FeedCell()
+//            .previewLayout(.sizeThatFits)
+//            //.padding()
+//    }
+//}

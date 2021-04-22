@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct FeedView: View {
+    
+    @ObservedObject var viewModel = FeedViewModel()
+    
     var body: some View {
         ScrollView {
             //MARK: - loads only what is insight, helps with memory - LazyVStack
             LazyVStack(spacing: 32) {
-                ForEach(0 ..< 10) { _ in
-                    FeedCell()
+                ForEach(viewModel.posts) { post in
+                    FeedCell(post: post)
                 }
             } // LazyVStack
             .padding(.top)
@@ -21,8 +24,8 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedView()
-    }
-}
+//struct FeedView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FeedView()
+//    }
+//}
