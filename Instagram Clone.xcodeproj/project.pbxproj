@@ -43,6 +43,7 @@
 		0CE62D892631F53C007726C1 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE62D882631F53C007726C1 /* TextArea.swift */; };
 		0CE62D8C26320571007726C1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE62D8B26320571007726C1 /* Post.swift */; };
 		0CE62D8F263206B0007726C1 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE62D8E263206B0007726C1 /* FeedViewModel.swift */; };
+		0CE62D9226320F3B007726C1 /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE62D9126320F3B007726C1 /* PostGridViewModel.swift */; };
 		0CF72306262DDDF400758EEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF72305262DDDF400758EEB /* User.swift */; };
 		0CF7230B262DE05900758EEB /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF7230A262DE05900758EEB /* FirebaseFunctions */; };
 		0CF7230D262DE05900758EEB /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF7230C262DE05900758EEB /* FirebaseFirestoreSwift-Beta */; };
@@ -92,6 +93,7 @@
 		0CE62D882631F53C007726C1 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		0CE62D8B26320571007726C1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0CE62D8E263206B0007726C1 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		0CE62D9126320F3B007726C1 /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
 		0CF72305262DDDF400758EEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0CF72317262DE2AF00758EEB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		0CF7231A262E14C600758EEB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				0CAE686C26275EC4001BDA85 /* Feed */,
 				0CF72317262DE2AF00758EEB /* SearchViewModel.swift */,
 				0CE62D852631EB24007726C1 /* UploadPostViewModel.swift */,
+				0CE62D9126320F3B007726C1 /* PostGridViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				0CAE686226275E3C001BDA85 /* ContentView.swift in Sources */,
 				0CAE684A26275D29001BDA85 /* Instagram_CloneApp.swift in Sources */,
 				0CAE687126275F6A001BDA85 /* MainTabView.swift in Sources */,
+				0CE62D9226320F3B007726C1 /* PostGridViewModel.swift in Sources */,
 				0C77A28F2628A7650039C1B8 /* ResetPasswordView.swift in Sources */,
 				0CAE688126276022001BDA85 /* UploadPostView.swift in Sources */,
 				0CE62D862631EB24007726C1 /* UploadPostViewModel.swift in Sources */,
