@@ -16,7 +16,7 @@ struct FeedView: View {
             //MARK: - loads only what is insight, helps with memory - LazyVStack
             LazyVStack(spacing: 32) {
                 ForEach(viewModel.posts) { post in
-                    FeedCell(post: post)
+                    FeedCell(viewModel: FeedCellViewModel(post: post))
                 }
             } // LazyVStack
             .padding(.top)

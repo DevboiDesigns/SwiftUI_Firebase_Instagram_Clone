@@ -38,8 +38,4 @@ struct PostGridView: View {
     }
 }
 
-//struct PostGridView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PostGridView()
-//    }
-//}
+

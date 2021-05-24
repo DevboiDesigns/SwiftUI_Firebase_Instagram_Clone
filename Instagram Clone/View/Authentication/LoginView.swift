@@ -21,7 +21,7 @@ struct LoginView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    Image("ETP_logo")
+                    Image("Instagram_logo_white")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 100, alignment: .center)
@@ -99,8 +99,8 @@ struct LoginView: View {
     }
 }
 
-//struct LoginView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginView()
-//    }
-//}
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
+}
