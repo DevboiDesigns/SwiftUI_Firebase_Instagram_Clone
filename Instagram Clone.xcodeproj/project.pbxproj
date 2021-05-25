@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C63B335262E1B3E004BD46F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B334262E1B3E004BD46F /* UserService.swift */; };
+		0C646D5C265D520A000097C9 /* NotificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C646D5B265D520A000097C9 /* NotificationCellViewModel.swift */; };
+		0C646D5E265D92AD000097C9 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C646D5D265D92AD000097C9 /* LazyView.swift */; };
 		0C77A2892628A7440039C1B8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C77A2882628A7440039C1B8 /* LoginView.swift */; };
 		0C77A28C2628A7520039C1B8 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C77A28B2628A7520039C1B8 /* RegistrationView.swift */; };
 		0C77A28F2628A7650039C1B8 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C77A28E2628A7650039C1B8 /* ResetPasswordView.swift */; };
@@ -65,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		0C63B334262E1B3E004BD46F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		0C646D5B265D520A000097C9 /* NotificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewModel.swift; sourceTree = "<group>"; };
+		0C646D5D265D92AD000097C9 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		0C77A2882628A7440039C1B8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0C77A28B2628A7520039C1B8 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		0C77A28E2628A7650039C1B8 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				0C77A2942628A9B40039C1B8 /* CustomSecureField.swift */,
 				0CC6B825262CB92B003E43B2 /* Constants.swift */,
 				0CE62D882631F53C007726C1 /* TextArea.swift */,
+				0C646D5D265D92AD000097C9 /* LazyView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 		0CAE686726275E62001BDA85 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				0CE85920265C800A0048788B /* CustomInputView.swift */,
 				0CE8591A265C7CFE0048788B /* CommentsView.swift */,
 				0CE8591C265C7D040048788B /* CommentsCell.swift */,
 			);
@@ -318,7 +324,6 @@
 				0CAE688926277F2F001BDA85 /* PostGridView.swift */,
 				0CAE688C2627834F001BDA85 /* UserCell.swift */,
 				0CAE688F26278359001BDA85 /* UserListView.swift */,
-				0CE85920265C800A0048788B /* CustomInputView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE85924265C8F9A0048788B /* NotificationsViewModel.swift */,
+				0C646D5B265D520A000097C9 /* NotificationCellViewModel.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 			files = (
 				0CE62D8F263206B0007726C1 /* FeedViewModel.swift in Sources */,
 				0CAE687826275FD5001BDA85 /* SearchView.swift in Sources */,
+				0C646D5E265D92AD000097C9 /* LazyView.swift in Sources */,
 				0CAE687526275FA7001BDA85 /* FeedView.swift in Sources */,
 				0CAE688A26277F2F001BDA85 /* PostGridView.swift in Sources */,
 				0C77A28C2628A7520039C1B8 /* RegistrationView.swift in Sources */,
@@ -480,6 +487,7 @@
 				0CAE689626279239001BDA85 /* NotificationCell.swift in Sources */,
 				0C77A2892628A7440039C1B8 /* LoginView.swift in Sources */,
 				0CE85923265C8D9A0048788B /* Notification.swift in Sources */,
+				0C646D5C265D520A000097C9 /* NotificationCellViewModel.swift in Sources */,
 				0CE85919265C7CF20048788B /* Comment.swift in Sources */,
 				0CAE6893262788F3001BDA85 /* Extensions.swift in Sources */,
 				0CC6B826262CB92B003E43B2 /* Constants.swift in Sources */,

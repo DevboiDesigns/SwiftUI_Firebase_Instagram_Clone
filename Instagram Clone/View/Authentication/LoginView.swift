@@ -50,15 +50,15 @@ struct LoginView: View {
                     HStack {
                         Spacer()
                         
-                        Button(action: {
-                            
-                        }, label: {
-                            Text("Forgot Password")
-                                .font(.system(size: 13, weight: .semibold))
-                                .foregroundColor(.white)
-                                .padding(.top)
-                                .padding(.trailing,28)
-                        })
+                        NavigationLink(
+                            destination: ResetPasswordView(email: $email).navigationBarHidden(true),
+                            label: {
+                                Text("Forgot Password")
+                                    .font(.system(size: 13, weight: .semibold))
+                                    .foregroundColor(.white)
+                                    .padding(.top)
+                                    .padding(.trailing,28)
+                            })
                     }
                     
                     // Sign In BUTTON

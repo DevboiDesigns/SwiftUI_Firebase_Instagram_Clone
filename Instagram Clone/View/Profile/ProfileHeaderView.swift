@@ -26,13 +26,24 @@ struct ProfileHeaderView: View {
                 Spacer()
                 
 
-                HStack(alignment: .center, spacing: 16) {
+                HStack(alignment: .firstTextBaseline, spacing: 12) {
+                    // Entire view will not show until values load
                     
-                    UserStatView(value: 22, title: "Post")
-                    UserStatView(value: 1111, title: "Followers")
-                    UserStatView(value: 696, title: "Following")
+//                    if let stats = viewModel.user.stats {
+//                        UserStatView(value: stats.posts, title: "Post")
+//                        UserStatView(value: stats.followers, title: "Followers")
+//                        UserStatView(value: stats.following, title: "Following")
+//                    }
+                    
+                    // OR
+                    // will show default 0 values until loads
+                    UserStatView(value: viewModel.user.stats?.posts ?? 0, title: "Post")
+                    UserStatView(value: viewModel.user.stats?.followers ?? 0, title: "Followers")
+                    UserStatView(value: viewModel.user.stats?.following ?? 0, title: "Following")
+                    
+                    
                 }
-                .padding(.trailing, 10)
+                .padding(.trailing, 20)
             }
             
             VStack(alignment: .leading, spacing: 5) {

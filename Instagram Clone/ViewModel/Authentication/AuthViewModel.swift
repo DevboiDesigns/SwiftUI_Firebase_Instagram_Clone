@@ -70,7 +70,14 @@ class AuthViewModel: ObservableObject {
     }
     
     //MARK: - RESET PASSWORD
-    func resetPassword() {
+    func resetPassword(withEmail email: String) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                print("Failed to reset password \(error.localizedDescription)")
+                return
+            }
+            print("Successfully Reset password")
+        }
         
     }
     

@@ -100,7 +100,7 @@ struct FeedCell: View {
             
             
             // time stamp
-            Text("2d")
+            Text(viewModel.timestampString)
                 .font(.system(size: 14))
                 .foregroundColor(.gray)
                 .padding(.leading, 8)

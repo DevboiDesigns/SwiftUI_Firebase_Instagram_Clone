@@ -27,17 +27,20 @@ struct CommentsCell: View {
             
             Spacer()
             
-            Text("2m")
+            Text(" \(comment.timestampString ?? "")")
                 .foregroundColor(.gray)
                 .font(.system(size: 12))
                
                 
-        }.padding(.horizontal)
+        }
+        
+        .padding(.horizontal)
     }
 }
 
 //struct CommentsCell_Previews: PreviewProvider {
 //    static var previews: some View {
-//        CommentsCell()
+//        CommentsCell(comment: Comment(id: "", username: "", postOwnerUid: "", profileImageUrl: "", commentText: "", timestamp: Timestamp(date: Date()), uid: ""))
+//            .previewDevice("iPhone 12 Pro")
 //    }
 //}
