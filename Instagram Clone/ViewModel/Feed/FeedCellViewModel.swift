@@ -28,6 +28,8 @@ class FeedCellViewModel: ObservableObject {
                 
                 COLLECTION_POSTS.document(postId).updateData(["likes" : self.post.likes + 1])  // ---- TO UPDATE DATA ON BACKEND
                                                                                                 // back end data and front end data are alwasy seperate but synced in func
+                NotificationsViewModel.uploadNotification(toUid: self.post.ownerUid, type: .like, post: self.post)
+                
                 self.post.didLike = true
                 self.post.likes += 1
             }

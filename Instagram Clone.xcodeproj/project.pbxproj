@@ -50,6 +50,8 @@
 		0CE8591D265C7D040048788B /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE8591C265C7D040048788B /* CommentsCell.swift */; };
 		0CE8591F265C7D140048788B /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE8591E265C7D140048788B /* CommentViewModel.swift */; };
 		0CE85921265C800A0048788B /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE85920265C800A0048788B /* CustomInputView.swift */; };
+		0CE85923265C8D9A0048788B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE85922265C8D9A0048788B /* Notification.swift */; };
+		0CE85925265C8F9A0048788B /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE85924265C8F9A0048788B /* NotificationsViewModel.swift */; };
 		0CF72306262DDDF400758EEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF72305262DDDF400758EEB /* User.swift */; };
 		0CF7230B262DE05900758EEB /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF7230A262DE05900758EEB /* FirebaseFunctions */; };
 		0CF7230D262DE05900758EEB /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF7230C262DE05900758EEB /* FirebaseFirestoreSwift-Beta */; };
@@ -106,6 +108,8 @@
 		0CE8591C265C7D040048788B /* CommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
 		0CE8591E265C7D140048788B /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		0CE85920265C800A0048788B /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		0CE85922265C8D9A0048788B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		0CE85924265C8F9A0048788B /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		0CF72305262DDDF400758EEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0CF72317262DE2AF00758EEB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		0CF7231A262E14C600758EEB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				0CF72305262DDDF400758EEB /* User.swift */,
 				0CE62D8B26320571007726C1 /* Post.swift */,
 				0CE85918265C7CF20048788B /* Comment.swift */,
+				0CE85922265C8D9A0048788B /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 		0CAE686D26275EC9001BDA85 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				0CE85924265C8F9A0048788B /* NotificationsViewModel.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				0CAE687526275FA7001BDA85 /* FeedView.swift in Sources */,
 				0CAE688A26277F2F001BDA85 /* PostGridView.swift in Sources */,
 				0C77A28C2628A7520039C1B8 /* RegistrationView.swift in Sources */,
+				0CE85925265C8F9A0048788B /* NotificationsViewModel.swift in Sources */,
 				0C77A2922628A9A10039C1B8 /* CustomTextField.swift in Sources */,
 				0CC6B823262CA809003E43B2 /* ImageUploader.swift in Sources */,
 				0CAE686226275E3C001BDA85 /* ContentView.swift in Sources */,
@@ -472,6 +479,7 @@
 				0CAE689026278359001BDA85 /* UserListView.swift in Sources */,
 				0CAE689626279239001BDA85 /* NotificationCell.swift in Sources */,
 				0C77A2892628A7440039C1B8 /* LoginView.swift in Sources */,
+				0CE85923265C8D9A0048788B /* Notification.swift in Sources */,
 				0CE85919265C7CF20048788B /* Comment.swift in Sources */,
 				0CAE6893262788F3001BDA85 /* Extensions.swift in Sources */,
 				0CC6B826262CB92B003E43B2 /* Constants.swift in Sources */,
