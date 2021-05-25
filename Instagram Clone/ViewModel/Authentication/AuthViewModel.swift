@@ -9,9 +9,9 @@ import SwiftUI
 import Firebase
 
 class AuthViewModel: ObservableObject {
-    
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var didSendResetPasswordLink = false
     
     static let shared = AuthViewModel()
     
@@ -76,7 +76,7 @@ class AuthViewModel: ObservableObject {
                 print("Failed to reset password \(error.localizedDescription)")
                 return
             }
-            print("Successfully Reset password")
+            self.didSendResetPasswordLink = true 
         }
         
     }

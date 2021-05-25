@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C365DA9265DA2E3006BE84B /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C365DA8265DA2E3006BE84B /* EditProfileView.swift */; };
+		0C365DAB265DA6DB006BE84B /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C365DAA265DA6DB006BE84B /* EditProfileViewModel.swift */; };
 		0C63B335262E1B3E004BD46F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B334262E1B3E004BD46F /* UserService.swift */; };
 		0C646D5C265D520A000097C9 /* NotificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C646D5B265D520A000097C9 /* NotificationCellViewModel.swift */; };
 		0C646D5E265D92AD000097C9 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C646D5D265D92AD000097C9 /* LazyView.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C365DA8265DA2E3006BE84B /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		0C365DAA265DA6DB006BE84B /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		0C63B334262E1B3E004BD46F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0C646D5B265D520A000097C9 /* NotificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewModel.swift; sourceTree = "<group>"; };
 		0C646D5D265D92AD000097C9 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 				0CAE689826279725001BDA85 /* ProfileHeaderView.swift */,
 				0CAE689B26279E2E001BDA85 /* UserStatView.swift */,
 				0CAE689E2627A0C0001BDA85 /* ProfileActionButtonView.swift */,
+				0C365DA8265DA2E3006BE84B /* EditProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				0CF7231A262E14C600758EEB /* ProfileViewModel.swift */,
+				0C365DAA265DA6DB006BE84B /* EditProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -463,11 +469,13 @@
 				0CAE688126276022001BDA85 /* UploadPostView.swift in Sources */,
 				0CE62D862631EB24007726C1 /* UploadPostViewModel.swift in Sources */,
 				0CE8591F265C7D140048788B /* CommentViewModel.swift in Sources */,
+				0C365DA9265DA2E3006BE84B /* EditProfileView.swift in Sources */,
 				0CAE68A22627AC7B001BDA85 /* ImagePicker.swift in Sources */,
 				0CE62D892631F53C007726C1 /* TextArea.swift in Sources */,
 				0CAE689926279725001BDA85 /* ProfileHeaderView.swift in Sources */,
 				0C63B335262E1B3E004BD46F /* UserService.swift in Sources */,
 				0CE85921265C800A0048788B /* CustomInputView.swift in Sources */,
+				0C365DAB265DA6DB006BE84B /* EditProfileViewModel.swift in Sources */,
 				0CAE687E2627600A001BDA85 /* ProfileView.swift in Sources */,
 				0CAE689C26279E2E001BDA85 /* UserStatView.swift in Sources */,
 				0CAE688D2627834F001BDA85 /* UserCell.swift in Sources */,

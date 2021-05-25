@@ -79,6 +79,9 @@ struct ResetPasswordView: View {
                 }
             }
         }
+        .onReceive(viewModel.$didSendResetPasswordLink) { _ in
+            self.mode.wrappedValue.dismiss()
+        }
     }
 }
 //struct ResetPasswordView_Previews: PreviewProvider {

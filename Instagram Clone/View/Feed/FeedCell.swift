@@ -1,6 +1,6 @@
 //
 //  FeedCell.swift
-//  Instagram Clone
+//  Instagram Clone   LazyView(ProfileView(user: user))
 //
 //  Created by Christopher Hicks on 4/14/21.
 //

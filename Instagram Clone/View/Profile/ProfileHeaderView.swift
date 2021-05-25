@@ -51,9 +51,11 @@ struct ProfileHeaderView: View {
                     .font(.system(size: 15, weight: .semibold))
                     .padding(.leading, 20)
                 
-                Text("CEO English A Tu Puerta | Travel Consultant")
-                    .font(.system(size: 15))
-                    .padding(.leading, 20)
+                if let bio = viewModel.user.bio {
+                    Text(bio)
+                        .font(.system(size: 15))
+                        .padding(.leading, 20)
+                }
             }
             
             HStack {
