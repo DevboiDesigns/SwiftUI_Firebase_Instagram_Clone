@@ -17,6 +17,7 @@ class FeedCellViewModel: ObservableObject {
     
     init(post: Post) {
         self.post = post
+        checkIfUserLikedPost()
     }
     
     func like() {
@@ -25,20 +26,38 @@ class FeedCellViewModel: ObservableObject {
         COLLECTION_POSTS.document(postId).collection("post-likes").document(uid).setData([:]) { _ in
             COLLECTION_USERS.document(uid).collection("user-likes").document(postId).setData([:]) { _ in
                 
-                COLLECTION_POSTS.document(postId).updateData(["likes" : self.post.likes + 1])  // ---- TO UPDATE DATA ON BACKEND 
-                
+                COLLECTION_POSTS.document(postId).updateData(["likes" : self.post.likes + 1])  // ---- TO UPDATE DATA ON BACKEND
+                                                                                                // back end data and front end data are alwasy seperate but synced in func
                 self.post.didLike = true
                 self.post.likes += 1
             }
         }
-        print("Like Post")
     }
     
     func unlike() {
-        print("Unlike Post")
+        guard post.likes > 0 else { return }
+        guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+        guard let postId = post.id else { return }
+        
+        COLLECTION_POSTS.document(postId).collection("post-likes").document(uid).delete { _ in
+            COLLECTION_USERS.document(uid).collection("user-likes").document(postId).delete { _ in
+                COLLECTION_POSTS.document(postId).updateData(["likes" : self.post.likes - 1])  // ---- TO UPDATE DATA ON BACKEND
+                
+                self.post.didLike = false
+                self.post.likes -= 1
+                
+            }
+        }
     }
     
     func checkIfUserLikedPost() {
+        guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+        guard let postId = post.id else { return }
+        
+        COLLECTION_USERS.document(uid).collection("user-likes").document(postId).getDocument { snapshot, _ in
+            guard let didLike = snapshot?.exists else { return }
+            self.post.didLike = didLike
+        }
         
     }
 }
